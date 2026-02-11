@@ -1,0 +1,73 @@
+
+.pagUno {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+}
+.inicio {
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.principal {
+    width:100%;
+    height:100%;
+}
+
+.fondoPres{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*z-index: -1;
+    opacity: 0.9;*/
+}
+
+.PagInicial {
+    position:absolute;
+    top:75%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    color: #00ffff;
+    font-size: 140%;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    text-shadow: 0 0 5px #00ffff,
+                 0 0 10px #00ffff,
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff;
+  animation:
+  zoomNeon 1.2s ease-out forwards,
+  parpadeo 1.5s infinite;
+  animation-delay: 5s, 6.2s;
+}
+
+/* animacion de aparicion */
+@keyframes zoomNeon {
+    0% {
+        opacity:0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+    100% {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(1);
+    }
+    }
+
+/* parpadeo del texto*/
+@keyframes parpadeo{
+    0%, 100% {
+        text-shadow: 0 0 5px #00ffff,
+                    0 0 10px #00ffff,
+                    0 0 20px #00ffff,
+                    0 0 40px #00ffff;
+    }
+    50%{
+        opacity: 0.3;
+        text-shadow:none;
+    }
+    }
